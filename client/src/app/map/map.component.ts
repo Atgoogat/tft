@@ -48,6 +48,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.map.getMap().addControl(control.scale({ imperial: false }));
+    this.updateTrees();
   }
 
   updateTrees() {
