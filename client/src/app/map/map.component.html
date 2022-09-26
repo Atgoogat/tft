@@ -1,0 +1,13 @@
+<div
+  class="map"
+  leaflet
+  [leafletOptions]="options"
+  (leafletCenterChange)="updateTrees()"
+  (leafletMapZoom)="updateTrees()"
+>
+  <app-map-tree-marker
+    *ngIf="trees$ | async as trees"
+    [trees]="trees"
+  ></app-map-tree-marker>
+  <app-map-location-marker></app-map-location-marker>
+</div>
